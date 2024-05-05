@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import OM from './om.gif';
 
 
 function ChapterDetails() {
@@ -11,7 +10,6 @@ function ChapterDetails() {
     const [verses, setVerses] = useState([]);
     const [verseNumber, setVerseNumber] = useState(1);
     const [verseData, setVerseData] = useState(null);
-    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
 
