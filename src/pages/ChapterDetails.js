@@ -3,7 +3,6 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-
 function ChapterDetails() {
     const [chapters, setChapters] = useState([]);
     const [chapterNumber, setChapterNumber] = useState(1);
@@ -12,8 +11,6 @@ function ChapterDetails() {
     const [verseData, setVerseData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
-
 
     useEffect(() => {
         const fetchChapters = async () => {
@@ -88,7 +85,6 @@ function ChapterDetails() {
             const nextChapterNumber = chapterNumber < chapters.length ? chapterNumber + 1 : 1;
             setChapterNumber(nextChapterNumber);
             setVerseNumber(1);
-
         }
     };
 
@@ -106,37 +102,33 @@ function ChapterDetails() {
 
     return (
         <div className="container mt-5">
-
             <div className="row">
-                <div className="col-md-1">
+                <div className="col-md-12 d-flex justify-content-between align-items-center mb-3">
                     <button className="btn btn-link" onClick={handlePrevVerse}>
                         <FontAwesomeIcon icon={faAngleLeft} />
                     </button>
+                    <button className="btn btn-link" onClick={handleNextVerse}>
+                        <FontAwesomeIcon icon={faAngleRight} />
+                    </button>
                 </div>
-                <div className="col-md-10">
-                    <div className="row">
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="chapterSelect">Select Chapter:</label>
-                                <select className="form-control" id="chapterSelect" value={chapterNumber} onChange={handleChapterChange}>
-                                    {chapters.map((chapter) => (
-                                        <option key={chapter.chapter_number} value={chapter.chapter_number}>Chapter {chapter.chapter_number} : {chapter.name_meaning}</option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="verseSelect">Select Verse:</label>
-                                <select className="form-control" id="verseSelect" value={verseNumber} onChange={handleVerseChange}>
-                                    {verses.map((verse) => (
-                                        <option key={verse.verse_number} value={verse.verse_number}>Verse {verse.verse_number}</option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    {verseData && (
+                <div className="col-md-6 mb-3">
+                    <label htmlFor="chapterSelect" className="form-label">Select Chapter:</label>
+                    <select className="form-select" id="chapterSelect" value={chapterNumber} onChange={handleChapterChange}>
+                        {chapters.map((chapter) => (
+                            <option key={chapter.chapter_number} value={chapter.chapter_number}>Chapter {chapter.chapter_number} : {chapter.name_meaning}</option>
+                        ))}
+                    </select>
+                </div>
+                <div className="col-md-6 mb-3">
+                    <label htmlFor="verseSelect" className="form-label">Select Verse:</label>
+                    <select className="form-select" id="verseSelect" value={verseNumber} onChange={handleVerseChange}>
+                        {verses.map((verse) => (
+                            <option key={verse.verse_number} value={verse.verse_number}>Verse {verse.verse_number}</option>
+                        ))}
+                    </select>
+                </div>
+                {verseData && (
+                    <div className="col-md-12">
                         <div className="card mt-2">
                             <div className="card-body">
                                 <h5 className="card-title">Chapter {verseData.chapter_number}, Verse {verseData.verse_number}</h5>
@@ -156,13 +148,8 @@ function ChapterDetails() {
                                 </div>
                             </div>
                         </div>
-                    )}
-                </div>
-                <div className="col-md-1">
-                    <button className="btn btn-link" onClick={handleNextVerse}>
-                        <FontAwesomeIcon icon={faAngleRight} />
-                    </button>
-                </div>
+                    </div>
+                )}
             </div>
         </div>
     );
