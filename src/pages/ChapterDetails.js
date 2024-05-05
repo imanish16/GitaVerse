@@ -10,6 +10,7 @@ function ChapterDetails() {
     const [verses, setVerses] = useState([]);
     const [verseNumber, setVerseNumber] = useState(1);
     const [verseData, setVerseData] = useState(null);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
 
@@ -100,7 +101,7 @@ function ChapterDetails() {
         }
     };
 
-    // if (loading) return <div className="loading"></div>;
+    if (loading) return <div className="loading"></div>;
     if (error) return <div className="error">Error: {error}</div>;
 
     return (
