@@ -13,6 +13,7 @@ export default function AppRouter() {
                 <Route path="/daily-verse" element={<Verse />} />
                 <Route path="/chapter-verse" element={<ChapterDetails />} />
                 {/* <Route path="/oops" element={<ErrorNotFound404 />} /> */}
+                <Route path="/" element={<Navigate to="/chapter-verse" />} />
                 <Route path="*" element={<Navigate to="/oops" />} />
             </Routes>
         </>

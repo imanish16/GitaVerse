@@ -15,7 +15,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#D4AA7D' }}>
             <div className="container-fluid">
-                <NavLink className="navbar-brand libre-baskerville-regular" to="/" onClick={closeSidebar}>GitaVerse</NavLink>
+                <span className="navbar-brand libre-baskerville-regular" to="/" onClick={closeSidebar}>GitaVerse</span>
                 <button className="navbar-toggler" type="button" onClick={toggleSidebar}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
