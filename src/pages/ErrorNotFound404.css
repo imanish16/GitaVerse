@@ -1,0 +1,32 @@
+.gv-404 {
+  width: min(480px, calc(100% - 2rem));
+  margin: var(--gv-space-9) auto;
+  text-align: center;
+}
+
+.gv-404__code {
+  margin: 0;
+  font-family: var(--gv-font-display);
+  font-size: 3rem;
+  color: var(--gv-gold);
+}
+
+.gv-404__title {
+  margin: var(--gv-space-3) 0;
+  font-family: var(--gv-font-display);
+  font-size: 1.75rem;
+}
+
+.gv-404__text {
+  margin: 0 0 var(--gv-space-5);
+  color: var(--gv-ink-soft);
+}
+
+.gv-404__link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--gv-ink);
+  color: var(--gv-parchment);
+  text-decoration: none;
+}

@@ -1,0 +1,17 @@
+.gv-page {
+  width: min(960px, calc(100% - 2rem));
+  margin: var(--gv-space-5) auto var(--gv-space-7);
+}
+
+.gv-page__status {
+  margin: var(--gv-space-5) auto;
+  text-align: center;
+  color: var(--gv-ink-soft);
+}
+
+.gv-page__status--error {
+  color: #8b2e1a;
+  padding: var(--gv-space-4);
+  background: rgba(196, 107, 58, 0.12);
+  border-radius: var(--gv-radius-md);
+}

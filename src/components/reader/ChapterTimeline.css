@@ -1,0 +1,115 @@
+.gv-timeline {
+  width: 100%;
+  margin-top: var(--gv-space-6);
+  padding-top: var(--gv-space-5);
+  border-top: 1px solid var(--gv-line);
+}
+
+.gv-timeline__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--gv-space-3);
+  margin-bottom: var(--gv-space-4);
+}
+
+.gv-timeline__title {
+  margin: 0;
+  font-family: var(--gv-font-display);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.gv-timeline__hint {
+  margin: 0;
+  color: var(--gv-ink-faint);
+  font-size: 0.85rem;
+}
+
+.gv-timeline__track {
+  display: flex;
+  gap: var(--gv-space-3);
+  overflow-x: auto;
+  padding: var(--gv-space-2) var(--gv-space-1) var(--gv-space-4);
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gv-timeline__track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gv-timeline__track::-webkit-scrollbar-thumb {
+  background: var(--gv-gold);
+  border-radius: 999px;
+}
+
+.gv-timeline__node {
+  flex: 0 0 auto;
+  width: 108px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gv-space-2);
+  padding: var(--gv-space-3) var(--gv-space-2);
+  border: 1px solid transparent;
+  border-radius: var(--gv-radius-md);
+  background: transparent;
+  color: var(--gv-ink-soft);
+  cursor: pointer;
+  transition:
+    transform var(--gv-motion-fast) var(--gv-ease),
+    border-color var(--gv-motion-fast) var(--gv-ease),
+    background var(--gv-motion-fast) var(--gv-ease);
+}
+
+.gv-timeline__node:hover {
+  transform: translateY(-2px);
+  background: var(--gv-surface);
+}
+
+.gv-timeline__node.is-active {
+  border-color: var(--gv-clay);
+  background: var(--gv-surface);
+  color: var(--gv-ink);
+  box-shadow: var(--gv-shadow-1);
+}
+
+.gv-timeline__symbol {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--gv-parchment-deep);
+  color: var(--gv-ink);
+}
+
+.gv-timeline__symbol img {
+  width: 28px;
+  height: 28px;
+  filter: none;
+}
+
+.gv-timeline__node.is-active .gv-timeline__symbol {
+  background: rgba(196, 107, 58, 0.15);
+  color: var(--gv-clay-deep);
+}
+
+.gv-timeline__num {
+  font-family: var(--gv-font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.gv-timeline__name {
+  font-size: 0.72rem;
+  line-height: 1.25;
+  text-align: center;
+  max-width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

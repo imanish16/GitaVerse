@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid slice">
+  <path d="M0 260 Q200 240 400 255 T800 250 L800 360 L0 360 Z" fill="#A67C52"/>
+  <path d="M0 290 Q250 270 500 295 T800 285 L800 360 L0 360 Z" fill="#8C6239"/>
+  <g fill="#5C3A21" opacity="0.45">
+    <rect x="70" y="230" width="3" height="35"/><polygon points="70,230 95,238 70,246"/>
+    <rect x="140" y="235" width="3" height="30"/><polygon points="140,235 162,242 140,249"/>
+    <rect x="680" y="228" width="3" height="36"/><polygon points="683,228 660,236 683,244"/>
+    <rect x="730" y="234" width="3" height="30"/><polygon points="733,234 712,241 733,248"/>
+  </g>
+</svg>

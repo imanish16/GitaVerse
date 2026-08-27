@@ -1,0 +1,87 @@
+.gv-reader {
+  width: 100%;
+  max-width: 640px;
+  margin: var(--gv-space-6) auto 0;
+  text-align: center;
+}
+
+.gv-reader__chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--gv-space-5);
+}
+
+.gv-reader__nav {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--gv-line);
+  background: var(--gv-surface);
+  color: var(--gv-ink);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform var(--gv-motion-fast) var(--gv-ease), border-color var(--gv-motion-fast) var(--gv-ease);
+}
+
+.gv-reader__nav:hover {
+  transform: translateY(-2px);
+  border-color: var(--gv-clay);
+}
+
+.gv-reader__progress {
+  margin: 0;
+  color: var(--gv-ink-faint);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+.gv-reader__header {
+  margin-bottom: var(--gv-space-5);
+}
+
+.gv-reader__chapter {
+  margin: 0 0 var(--gv-space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--gv-ink-faint);
+}
+
+.gv-reader__ref {
+  margin: 0;
+  font-family: var(--gv-font-display);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--gv-ink);
+}
+
+.gv-reader__sanskrit {
+  margin: 0 0 var(--gv-space-4);
+  font-family: var(--gv-font-sanskrit);
+  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+  line-height: 1.7;
+  color: var(--gv-ink);
+}
+
+.gv-reader__translit {
+  margin: 0 0 var(--gv-space-4);
+  font-style: italic;
+  color: var(--gv-ink-soft);
+  line-height: 1.6;
+}
+
+.gv-reader__translation {
+  margin: 0 auto var(--gv-space-5);
+  max-width: 34em;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--gv-ink);
+}
+
+.gv-reader__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--gv-space-3);
+}

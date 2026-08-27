@@ -1,0 +1,96 @@
+.gv-scene {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 20 / 9;
+  min-height: 180px;
+  max-height: 320px;
+  overflow: hidden;
+  border-radius: var(--gv-radius-lg);
+  background: linear-gradient(180deg, var(--gv-sunset-top), var(--gv-sunset-bot));
+  box-shadow: var(--gv-shadow-2);
+}
+
+.gv-scene__layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.gv-scene__layer--parallax-slow {
+  animation: gv-drift 18s ease-in-out infinite alternate;
+}
+
+.gv-scene__layer--parallax-fast {
+  animation: gv-drift 10s ease-in-out infinite alternate-reverse;
+}
+
+.gv-scene__layer--breathe {
+  animation: gv-breathe 4.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.gv-scene__layer--float {
+  animation: gv-float 7s ease-in-out infinite;
+}
+
+.gv-scene__veil {
+  position: absolute;
+  inset: auto 0 0;
+  height: 35%;
+  background: linear-gradient(transparent, rgba(44, 26, 14, 0.18));
+  pointer-events: none;
+}
+
+.gv-scene--simple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gv-space-3);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(232, 160, 90, 0.35), transparent 55%),
+    linear-gradient(160deg, var(--gv-parchment), var(--gv-gold-soft));
+  aspect-ratio: 16 / 7;
+}
+
+.gv-scene__simple-symbol {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 252, 246, 0.65);
+  color: var(--gv-ink);
+}
+
+.gv-scene__caption {
+  margin: 0;
+  font-family: var(--gv-font-display);
+  font-size: 0.95rem;
+  color: var(--gv-ink-soft);
+}
+
+@keyframes gv-drift {
+  from { transform: translateX(-1.2%); }
+  to { transform: translateX(1.2%); }
+}
+
+@keyframes gv-breathe {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes gv-float {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(-6px); opacity: 1; }
+}
+
+@media (max-width: 640px) {
+  .gv-scene {
+    aspect-ratio: 16 / 10;
+    border-radius: var(--gv-radius-md);
+  }
+}

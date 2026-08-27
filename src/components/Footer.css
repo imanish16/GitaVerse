@@ -1,0 +1,14 @@
+.footer-custom {
+  background: #2c1a0e;
+  color: #f7f0e4;
+  margin-top: var(--gv-space-8, 64px);
+}
+
+.footer-custom a {
+  border-color: rgba(247, 240, 228, 0.35) !important;
+  color: #f7f0e4 !important;
+}
+
+.footer-custom a:hover {
+  background: rgba(247, 240, 228, 0.1);
+}
