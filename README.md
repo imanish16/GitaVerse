@@ -1,13 +1,13 @@
 # GitaVerse
 
-GitaVerse is a web application that provides users with daily inspiration and wisdom from the timeless teachings of the Bhagavad Gita. It offers a curated collection of verses, reflections, and insights to help individuals apply the teachings of the Bhagavad Gita to their daily lives.
+GitaVerse is a calm storybook for reading the Bhagavad Gita — chapters and verses with Sanskrit, transliteration, and clear everyday meaning in one quiet place.
 
 ## Features
 
-- **Daily Wisdom**: Get a new quote from the Bhagavad Gita every day, accompanied by reflections and insights.
-- **Chapter & Verses**: Explore chapters and verses of the Bhagavad Gita, with translations and commentaries.
-- **Responsive Design**: The application is designed to work seamlessly across desktop, tablet, and mobile devices.
-- **Developer Information**: Learn more about the developer behind GitaVerse.
+- **Storybook reader**: A chapter → verse experience with Sanskrit, transliteration, and meaning.
+- **Chapter timeline**: Browse all 18 chapters with symbolic navigation.
+- **Listen**: Hear verses via the browser’s speech synthesis.
+- **Responsive design**: Works across desktop, tablet, and mobile.
 
 ## Technologies Used
 
